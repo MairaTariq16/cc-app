@@ -1,0 +1,12 @@
+{
+  "name": "cc-app-performance-tests",
+  "version": "0.1.0",
+  "description": "Performance tests for CC App APIs using k6",
+  "scripts": {
+    "perf:all": "k6 run api-performance.js",
+    "perf:report": "k6 run --out web-dashboard api-performance.js",
+    "perf:hash": "k6 run hash-test.js",
+    "perf:compress": "k6 run compress-test.js"
+  },
+  "license": "MIT"
+}

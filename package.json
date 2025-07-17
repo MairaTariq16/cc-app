@@ -6,7 +6,11 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "perf:all": "cd performance-tests && k6 run api-performance.js",
+    "perf:report": "cd performance-tests && k6 run --out web-dashboard api-performance.js",
+    "perf:hash": "cd performance-tests && k6 run hash-test.js",
+    "perf:compress": "cd performance-tests && k6 run compress-test.js"
   },
   "dependencies": {
     "archiver": "^7.0.1",
