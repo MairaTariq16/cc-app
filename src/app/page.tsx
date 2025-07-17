@@ -129,6 +129,12 @@ export default function Home() {
           </div>
         </form>
 
+        {files && files.length > 0 && (
+          <div className="mt-4 p-4 bg-blue-50 text-blue-700 rounded-lg">
+            {files.length} file{files.length === 1 ? '' : 's'} selected
+          </div>
+        )}
+
         {error && (
           <div className="mt-4 p-4 bg-red-100 text-red-700 rounded-lg">
             {error}
@@ -145,12 +151,6 @@ export default function Home() {
                 <p><span className="font-medium">File Size:</span> {Math.round(result.size / 1024)} KB</p>
               </div>
             ))}
-          </div>
-        )}
-
-        {files && files.length > 0 && (
-          <div className="mt-4 p-4 bg-blue-50 text-blue-700 rounded-lg">
-            {files.length} file{files.length === 1 ? '' : 's'} selected
           </div>
         )}
       </div>
